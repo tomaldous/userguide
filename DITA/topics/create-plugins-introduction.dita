@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
+<topic id="create-plugins-introduction">
+  <title>Introduction</title>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>Develop an &lt;oXygen/&gt; Plugin<indexterm>introduction</indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p><ph keyref="product"/> defines a couple of extension
+      points to allow providing custom functionality via plugins. The plugin support includes the
+      following types of plugins:</p>
+    <ul>
+      <li>General plugins</li>
+      <li>Selection plugins</li>
+      <li>Document plugins</li>
+      <li>Custom protocol plugins</li>
+      <li>Resource locking custom protocol plugins</li>
+      <li>Components validation plugins</li>
+      <li>Workspace access plugins</li>
+      <li>Open redirect plugins</li>
+    </ul>
+    <p>A selection plugin can be applied to both an XML document and a non-XML document. Other types
+      of plugins can be applied only to XML documents.</p>
+    <p>A components validation plugin and a workspace access plugin are not connected with one
+      document type, they have access to some resources of the application workspace used by all
+      opened documents.</p>
+    <p><indexterm>Extend Oxygen with plugins<indexterm>requirements</indexterm></indexterm>In order
+      to develop a plugin a Java development environment must be installed. Apart from any library
+      that the specific plugin requires, the file <filepath>oxygen.jar</filepath> is necessary for
+      plugin compilation. Also an <ph keyref="product"/>
+      installation is helpful for testing the deployment and plugin the functionality.</p>
+  </body>
+</topic>

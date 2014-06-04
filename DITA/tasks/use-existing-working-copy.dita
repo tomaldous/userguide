@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="use-existing-working-copy">
+  <title>Use an Existing Working Copy</title>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>SVN Client<indexterm>use an existing working copy</indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <taskbody>
+    <context>Using an existing working copy is the process of taking a working copy that exists on
+      your file system and connecting it to <ph
+        conref="../topics/oxygenEntitiesDictionary.dita#OxygenEntities/apacheSubversion"/>
+      repository. If you have a brand new project that you want to import into your repository, then
+      see the section <xref href="../topics/import-repos.dita">Import resources into the
+        repository</xref>. The following procedure assumes that you have an existing valid working
+      copy on your file system.</context>
+    <steps>
+      <step>
+        <cmd>Click the <uicontrol>Working Copies Manager</uicontrol> toolbar button <image
+            href="../img/SvnWCManagerWin16.png" id="image_hyg_l1h_hf"/> (<image
+            id="image_g44_rmg_hf" href="../img/SvnWCManagerMac16.png"/> on Mac OS X) in the <xref
+            href="../topics/working-copy-view.dita"><uicontrol>Working Copy</uicontrol>
+          view</xref>.</cmd>
+        <stepresult>This action opens the <uicontrol>Working copies list</uicontrol>
+          dialog.</stepresult>
+      </step>
+      <step>
+        <cmd>Press the <uicontrol>Add</uicontrol> button.</cmd>
+      </step>
+      <step>
+        <cmd>Select the working folder copy from the file system.</cmd>
+        <info>
+          <note>
+            <p>With SVN 1.6 and earlier, you can use any directory located in a working copy as a
+              standalone working copy. This helps you avoid loading a whole working copy when
+              needing to work only on a small part of it.</p>
+            <p>Starting with SVN 1.7,  all the internal information of a working copy is kept only
+              in the root directory. To track outside changes properly, Syncro SVN Client needs to
+              load the whole working copy.</p>
+          </note>
+        </info>
+      </step>
+      <step>
+        <cmd>Optionally you can press the <uicontrol>Edit</uicontrol> button to change the name of
+          the working copy that is displayed in the <uicontrol>Working Copy</uicontrol> view.</cmd>
+        <info>
+          <p>The name is useful to differentiate between working copies located in folders with the
+            same name. The default name is the name of the root folder of the working copy.</p>
+          <p>To change the working copies order, use the two arrow buttons which move the selected
+            working copy one position up or down.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Press the <uicontrol>OK</uicontrol> button.</cmd>
+      </step>
+    </steps>
+    <result>The selected working copy is loaded and presented in the <xref
+        href="../topics/working-copy-view.dita"><uicontrol>Working Copy</uicontrol>
+      view</xref>.</result>
+  </taskbody>
+</task>

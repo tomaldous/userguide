@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="merge-options">
+  <title>Merge Options</title><prolog>
+    <metadata>
+      <keywords><indexterm>SVN Branches/Tags<indexterm>merging<indexterm>merge
+          options</indexterm></indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <taskbody>
+    <!-- Included by conref in the three scenarios of the Merge wizard. -->
+    <steps>
+      <step id="next-button">
+        <cmd>Press the <uicontrol>Next</uicontrol> button.</cmd>
+        <stepresult>The <uicontrol>Merge Options</uicontrol> step of the wizard is opened:<fig>
+            <title>The Merge Wizard - Advanced Options</title>
+            <image href="../img/sa_svn_merge_options_dialog.png"/>
+          </fig></stepresult>
+      </step>
+      <step>
+        <cmd>Set advanced options if necessary before starting the merge process.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Set the depth of the merge operation in the <uicontrol>Merge depth</uicontrol>
+              combo box.</cmd>
+            <info>
+              <p>You can specify how far down into your working copy the merge should go by
+                selecting one of the following values:</p>
+              <ul>
+                <li>Current depth</li>
+                <li>Recursive (infinity)</li>
+                <li>Immediate children (immediates)</li>
+                <li>File children only (files)</li>
+                <li>This folder only (empty)</li>
+              </ul>
+              <p>The <i>depth</i> term is described in the <xref href="../topics/sparse-checkouts.dita">Sparse checkouts</xref> section. The default
+                depth is the depth of the current working copy.</p>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Check the <uicontrol>Ignore ancestry</uicontrol> checkbox (optional).</cmd>
+            <info>The <uicontrol>Ignore ancestry</uicontrol> checkbox allows a merge to be applied
+              between a branch and the trunk or between two branches even if they do not share a
+              common ancestry. Normally the branch and the trunk or the two branches that are merged
+              must have a common ancestor revision in the same repository. In case the two merged
+              trees were imported in the repository they are not related in the sense of a common
+              ancestor tree and the merge operation is possible by ignoring the missing common
+              ancestry of the two merged trees.</info>
+          </substep>
+          <substep>
+            <cmd>Check the <uicontrol>Ignore line endings</uicontrol> checkbox (optional).</cmd>
+          </substep>
+          <substep>
+            <cmd>Check the <uicontrol>Ignore Whitespaces</uicontrol> checkbox (optional).</cmd>
+            <info>The <uicontrol>Ignore line endings</uicontrol> and <uicontrol>Ignore
+                whitespaces</uicontrol> checkboxes allow you to specify how the line endings and
+              whitespace changes should be handled. If they are checked the changes due only to the
+              line endings and whitespaces are ignored. The default behavior is to treat all
+              whitespace and line-end differences as real changes to be merged. <uicontrol>Ignore
+                whitespace changes</uicontrol> excludes changes which are caused by a change in the
+              amount or type of whitespace, for example changing the indentation or changing tabs to
+              spaces. Adding whitespace where there was none before, or removing a whitespace
+              completely is still shown as a change. If <uicontrol>Ignore all
+                whitespaces</uicontrol> is checked all whitespace-only changes are excluded.</info>
+          </substep>
+          <substep>
+            <cmd>Check the <uicontrol>Only record the merge</uicontrol> checkbox (optional).</cmd>
+            <info>If you are using merge tracking support and you want to mark a revision as having
+              been merged, without actually doing the merge here, check the <uicontrol>Only record
+                the merge</uicontrol> checkbox. You might want to do this for two possible reasons.
+              You make the changes by hand, then mark the change as merged so that the merge
+              tracking algorithm is aware of it. Or you might want to prevent a particular revision
+              from being merged by marking it as already merged. This will prevent future
+              merging.</info>
+          </substep>
+          <substep>
+            <cmd>Press the <uicontrol>Test merge</uicontrol> button (optional).</cmd>
+            <info>By pressing the <uicontrol>Test merge</uicontrol> button you do a dry run of the
+              merge operation in order to see what files are affected and how without modifying the
+              working copy at all. This is very helpful in detecting where conflicts may
+              occur.</info>
+          </substep>
+        </substeps>
+      </step>
+      <step id="merge-button">
+        <cmd>Press the <uicontrol>Merge</uicontrol> button.</cmd>
+        <stepresult>The merge operation is executed.</stepresult>
+      </step>
+    </steps>
+    <result id="merge-result">When the merge is completed it's a good idea to look at the result of
+      the merge in the specified working copy and see if it meets your expectations. Because merging
+      is sometimes complicated, when there are major changes, <xref href="resolve-merge-conflicts.dita#resolve-merge-conflicts" format="dita">conflicts may
+        appear</xref>.</result>
+  </taskbody>
+</task>

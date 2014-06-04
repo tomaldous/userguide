@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="merge-trees">
+  <title>Merge Two Different Trees</title><prolog>
+    <metadata>
+      <keywords><indexterm>SVN Branches/Tags<indexterm>merging<indexterm>merge two different
+            trees</indexterm></indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <taskbody>
+    <context>This is a general case of the reintegrate method. You can consider the following
+      example: calculate the changes necessary to get (from) the HEAD revision of the trunk (to) the
+      HEAD revision of the branch, and apply those changes to my working copy (of the trunk). The
+      result is that trunk will be identical with the branch.<note>If the server does not support
+        merge-tracking then this is the only way to merge a branch back to trunk.</note>
+    </context>
+    <steps>
+      <step id="start-wizard">
+        <cmd>Go to menu <menucascade>
+            <uicontrol>Tools</uicontrol>
+            <uicontrol>Merge ...</uicontrol>
+          </menucascade></cmd>
+        <stepresult>The <uicontrol>Merge</uicontrol> wizard is opened:<fig>
+            <title>The Merge Wizard - The Merge Type</title>
+            <image href="../img/sa_svn_merge_different_dialog.png"/>
+          </fig></stepresult>
+      </step>
+      <step>
+        <cmd>Select the option <uicontrol>Merge two different trees</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Press the <uicontrol>Next</uicontrol> button.</cmd>
+        <stepresult>The second step of the <uicontrol>Merge</uicontrol> wizard is displayed:<fig>
+            <title>The Merge Wizard - Merge Two Different Trees</title>
+            <image href="../img/sa_svn_merge_trees_dialog.png"/>
+          </fig></stepresult>
+      </step>
+      <step>
+        <cmd>Specify the URL of the first tree in the <uicontrol>From</uicontrol> field.</cmd>
+        <info>
+          <p>If you are using this method to merge a feature branch back to trunk, you need to start
+            the merge wizard from within a working copy of trunk. In the <uicontrol>From</uicontrol>
+            field enter the full folder URL of the trunk. This may sound wrong, but remember that
+            the trunk is the start point to which you want to add the branch changes. In the
+              <uicontrol>To</uicontrol> field enter the full folder URL of the feature branch.</p>
+          <p>By default the start URL will be the URL of the selected file in the working copy. If
+            you want to specify a different URL you should browse the repository and select a start
+            URL and a revision.</p>
+        </info>
+        <substeps>
+          <substep>
+            <cmd>Select a URL in the <uicontrol>From</uicontrol> field.</cmd>
+          </substep>
+          <substep>
+            <cmd>Select a revision of the repository from the <uicontrol>From</uicontrol>
+              field.</cmd>
+            <info>
+              <p>In the <uicontrol>Revision</uicontrol> field enter the last revision number at
+                which the two trees were synchronized. If you are sure no-one else is making commits
+                you can use the HEAD revision in both cases. If there is a chance that someone else
+                may have made a commit since that synchronization, use the specific revision number
+                to avoid losing more recent commits. </p>
+              <p>By default the HEAD revision is selected. If you want a previous revision you have
+                to select the <uicontrol>Other revision</uicontrol> option and press <xref href="../topics/history-dialog.dita#history-dialog" format="dita">the
+                    <uicontrol>History</uicontrol> button</xref> to see a list of all revisions.</p>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Specify the URL of the second tree in the <uicontrol>To</uicontrol> field.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Select a URL in the <uicontrol>To</uicontrol> field.</cmd>
+          </substep>
+          <substep>
+            <cmd>Select a revision of the repository from the <uicontrol>To</uicontrol> field.</cmd>
+            <info>By default the HEAD revision is selected. If you want a previous revision you have
+              to select the <uicontrol>Other revision</uicontrol> option and press <xref href="../topics/history-dialog.dita#history-dialog" format="dita">the
+                  <uicontrol>History</uicontrol> button</xref> to see a list of all
+              revisions.</info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Specify the target of the merge operation in the <uicontrol>Target</uicontrol>
+          panel.</cmd>
+        <info>The <uicontrol>Target</uicontrol> panel of the dialog reminds you the location of the
+          target resource from the working copy where the merge result will be saved and its
+          corresponding repository URL.</info>
+        <substeps>
+          <substep>
+            <cmd>Specify the working copy path in the <uicontrol>Working copy</uicontrol>
+              field.</cmd>
+          </substep>
+          <substep>
+            <cmd>Specify the repository URL corresponding to the working copy.</cmd>
+          </substep>
+        </substeps>
+      </step>
+      <step conref="merge-options.dita#merge-options/next-button" conrefend="merge-options.dita#merge-options/merge-button">
+        <cmd/>
+      </step>
+      <step conref="resolve-merge-conflicts.dita#resolve-merge-conflicts/resolve-conflicts">
+        <cmd/>
+      </step>
+    </steps>
+  </taskbody>
+</task>

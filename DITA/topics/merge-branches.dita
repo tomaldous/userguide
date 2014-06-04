@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
+<topic id="merge-branches">
+    <title>Merging</title>
+    <prolog>
+    <metadata>
+      <keywords><indexterm>SVN Branches/Tags<indexterm>merging</indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+    <body>
+        <p>At some stage during the development you will want to merge the changes made on one
+            branch back into the trunk, or vice versa. Merge is closely related to Diff. The merge
+            is accomplished by comparing two points (branches or revisions) in the repository and
+            applying the obtained differences to your working copy.</p>
+        <p>It is a good idea to perform a merge into an unmodified working copy. If you have made
+            changes to your working copy, commit them first. If the merge does not go as you expect,
+            you may want to revert the changes and revert cannot recover your uncommitted
+            modifications.</p>
+        <p>The <uicontrol>Merge</uicontrol> action can be found in the <uicontrol>Tools</uicontrol>
+      menu of <ph keyref="product"/>. The directory selected when you issued the command will be the
+      result directory of the merge operation.</p>
+        <p>There are three common types of merging which are handled in different ways:</p>
+        <ul>
+            <li>merge revisions - integrate the modifications from a branch into the trunk or a
+                different branch, when the branches are created from the same trunk;</li>
+            <li>reintegrate a branch - integrate the modifications from a branch into the
+                trunk;</li>
+            <li>merge two different trees - the general case of integrating some changes between two
+                different branches.</li>
+        </ul>
+    </body>
+</topic>

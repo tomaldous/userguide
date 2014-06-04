@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="merge-branch">
+  <title>Reintegrate a Branch</title><prolog>
+    <metadata>
+      <keywords><indexterm>SVN Branches/Tags<indexterm>merging<indexterm>reintegrate a
+            branch</indexterm></indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <taskbody>
+    <prereq>There are some conditions which apply to a reintegrate merge: Firstly, the server must
+      support merge tracking. The working copy must be of depth infinite (no sparse checkouts), and
+      it must not have any local modifications, switched items or items that have been updated to
+      revisions other than HEAD. All changes to trunk made during branch development must have been
+      merged across to the branch (or marked as having been merged).<ul>
+        <li>The server must support merge tracking.</li>
+        <li>The working copy must be of depth infinite (no sparse checkouts), and it must not have
+          any local modifications, switched items or items that have been updated to revisions other
+          than HEAD.</li>
+        <li>All changes to trunk made during branch development must have been merged across to the
+          branch (or marked as having been merged).</li>
+      </ul></prereq>
+    <context>
+      <p>This method covers the case when you have made a feature branch. All trunk changes have
+        been ported to the feature branch, and now you want to merge it back into the trunk. Because
+        you have kept the feature branch synchronized with the trunk, the latest versions of branch
+        and trunk will be absolutely identical except for your branch changes. These changes can be
+        reintegrated into the trunk by this method.</p>
+      <p>It uses the merge-tracking features of <ph
+          conref="../topics/oxygenEntitiesDictionary.dita#OxygenEntities/apacheSubversion"/> to
+        calculate the correct revision ranges and to perform additional checks which ensure that the
+        branch has been fully updated with trunk changes. The range of revisions to merge will be
+        calculated automatically. This ensures that you don't accidentally undo work that others
+        have committed to trunk since you last synchronized changes. After the merge, all branch
+        development has been completely merged back into the main development line. The branch is
+        now redundant and can be deleted.</p>
+    </context>
+    <steps>
+      <step id="start-wizard">
+        <cmd>Go to menu <menucascade>
+            <uicontrol>Tools</uicontrol>
+            <uicontrol>Merge ...</uicontrol>
+          </menucascade></cmd>
+        <stepresult>The <uicontrol>Merge</uicontrol> wizard is opened:<fig>
+            <title>The Merge Wizard - The Merge Type</title>
+            <image href="../img/sa_svn_merge_reintegrate_dialog.png"/>
+          </fig></stepresult>
+      </step>
+      <step>
+        <cmd>Select the option <uicontrol>Reintegrate a branch</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Press the <uicontrol>Next</uicontrol> button.</cmd>
+        <stepresult>The second step of the <uicontrol>Merge</uicontrol> wizard is displayed:<fig>
+            <title>The Merge Wizard - Reintegrate Branch</title>
+            <image href="../img/sa_svn_reintegrate_branch_dialog.png"/>
+          </fig></stepresult>
+      </step>
+      <step>
+        <cmd>In the <b>From URL</b> field enter the folder URL of the branch or tag containing the
+          changes that you want to integrate.</cmd>
+        <info>
+          <p>You may also click the <uicontrol>Browse</uicontrol> button to browse the repository
+            and find the desired branch. If you have merged from this branch before, then just use
+            the drop down list which shows a history of previously used URLs.</p>
+          <p>The History button opens <xref href="../topics/history-dialog.dita#history-dialog" format="dita">the <uicontrol>History</uicontrol> dialog</xref> which allows you to
+            select a revision number of the repository with the changes.</p>
+        </info>
+      </step>
+      <step>
+        <cmd>Select the target of the operation.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Select the path of the working copy.</cmd>
+          </substep>
+          <substep>
+            <cmd>Select the URL of the repository corresponding to the working copy.</cmd>
+          </substep>
+        </substeps>
+        <info>The target panel of the dialog reminds you the location of the target resource from
+          the working copy where the merge result will be saved and its corresponding repository
+          URL.</info>
+      </step>
+      <step conref="merge-options.dita#merge-options/next-button" conrefend="merge-options.dita#merge-options/merge-button">
+        <cmd/>
+      </step>
+      <step conref="resolve-merge-conflicts.dita#resolve-merge-conflicts/resolve-conflicts">
+        <cmd/>
+      </step>
+    </steps>
+    <result conref="merge-options.dita#merge-options/merge-result"/>
+  </taskbody>
+</task>

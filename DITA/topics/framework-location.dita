@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="framework-location">
+  <title>Locations Preferences</title>
+  <body>
+    <p>The <uicontrol>Locations</uicontrol> preferences page allows you to specify the location from
+      which the frameworks used in <ph keyref="product"/> are loaded. You can choose between
+        <filepath>OXYGEN_INSTALLATION_FOLDER/frameworks</filepath>, or a custom directory. You are
+      also allowed to specify additional frameworks directories. The frameworks are loaded from the
+      current framework directory, from add-ons, and from the additional frameworks directories. The
+      priority of the frameworks is internal frameworks, followed by additional ones and external
+      frameworks.</p>
+  </body>
+</topic>

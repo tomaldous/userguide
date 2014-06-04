@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="merge-revisions-range">
+  <title>Merge Revisions</title><prolog>
+    <metadata>
+      <keywords><indexterm>SVN Branches/Tags<indexterm>merging<indexterm>merge
+          revisions</indexterm></indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <taskbody>
+    <context>This is the case when you have made one or more revisions to a branch (or to the trunk)
+      and you want to port those changes across to a different branch or trunk. An example of such
+      operation can be the following: calculate the changes necessary to get (from) revision 17 of
+      branch B1 (to) revision 25 of branch B1, and apply those changes to my working copy, of the
+      trunk or another branch.</context>
+    <steps>
+      <step conref="merge-branches-common-step.dita#merge-revisions-range/start-wizard">
+        <cmd/>
+      </step>
+      <step>
+        <cmd>Select the option <uicontrol>Merge revisions</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Press the <uicontrol>Next</uicontrol> button.</cmd>
+        <stepresult>The second step of the <uicontrol>Merge</uicontrol> wizard is displayed:<fig>
+            <title>The Merge Wizard - Revisions Range</title>
+            <image href="../img/sa_svn_merge_revisions_dialog.png"/>
+          </fig></stepresult>
+      </step>
+      <step>
+        <cmd>In the <b>From URL</b> field enter the folder URL of the branch or tag containing the
+          changes that you want to port into your working copy.</cmd>
+        <info>You may also click the <uicontrol>Browse</uicontrol> button to browse the repository
+          and find the desired branch. If you have merged from this branch before, then just use the
+          drop down list which shows a history of previously used URLs.</info>
+      </step>
+      <step>
+        <cmd>Select the revision range.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Choose between all revisions and a revision range.</cmd>
+            <info>
+              <p>In the <uicontrol>Revision range to merge</uicontrol> section you can choose to
+                merge all revisions or enter the list of revisions you want to merge in the
+                  <b>Revision range</b> field. This can be a single revision, a list of comma
+                separated specific revisions, or a range of revisions separated by a dash, or any
+                combination of these.</p>
+              <p>The <uicontrol>History</uicontrol> button opens the <xref href="../topics/history-dialog.dita#history-dialog" format="dita">the
+                    <uicontrol>History</uicontrol> dialog</xref> which allows selecting the list of
+                revisions to be merged in the easiest way. One or several revisions can be selected
+                in that dialog.</p>
+              <p>Be careful about using the HEAD revision. It may not refer to the revision you
+                think it does if someone else made a commit after your last update.</p>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Check the <b>Reverse merge</b> box (optional).</cmd>
+            <info>
+              <p>If you want to merge changes back out of your working copy, to revert a change
+                which has already been committed, select the revisions to revert and check the
+                  <b>Reverse merge</b> box.</p>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step>
+        <cmd>Specify the target where the changes of the branch will be integrated.</cmd>
+        <substeps>
+          <substep>
+            <cmd>Enter the working copy folder in the <uicontrol>Working copy</uicontrol>
+              field.</cmd>
+            <info>
+              <p>By default the root folder of the current working copy from the <uicontrol>Working
+                  Copy</uicontrol> view is set in this field.</p>
+              <p>If you have already merged some changes from this branch and you remember the last
+                merged revision, you can select that revision for the working copy using the
+                  <uicontrol>History</uicontrol> button. For example, if you have merged revisions
+                27 to 33 last time, then the start point for this merge operation should be revision
+                33.</p>
+            </info>
+          </substep>
+          <substep>
+            <cmd>Specify the URL of the target branch that will receive the changes.</cmd>
+            <info>
+              <p>By default the URL of the repository of the current working copy from the
+                  <uicontrol>Working Copy</uicontrol> view is set in this field.</p>
+              <p><ph
+                  conref="../topics/oxygenEntitiesDictionary.dita#OxygenEntities/apacheSubversion"/>
+                has merge tracking features and automatically records the last merged revision so
+                you do not need to remember when you performed the last merge.</p>
+            </info>
+          </substep>
+        </substeps>
+      </step>
+      <step conref="merge-options.dita#merge-options/next-button" conrefend="merge-options.dita#merge-options/merge-button">
+        <cmd/>
+      </step>
+      <step conref="resolve-merge-conflicts.dita#resolve-merge-conflicts/resolve-conflicts">
+        <cmd/>
+      </step>
+    </steps>
+    <result conref="merge-options.dita#merge-options/merge-result"/>
+  </taskbody>
+</task>

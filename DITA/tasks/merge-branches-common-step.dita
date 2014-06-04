@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "-//OASIS//DTD DITA Task//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/task.dtd">
+<task id="merge-revisions-range">
+  <title>Merge Branches Task - First Step</title>
+  <taskbody>
+    <!-- Included by conref in the three scenarios of the Merge wizard. -->
+    <steps>
+      <step id="start-wizard">
+        <cmd>Go to menu <menucascade>
+            <uicontrol>Tools</uicontrol>
+            <uicontrol>Merge ...</uicontrol>
+          </menucascade></cmd>
+        <stepresult>The <uicontrol>Merge</uicontrol> wizard is opened:<fig>
+            <title>The Merge Wizard - The Merge Type</title>
+            <image href="../img/sa_svn_merge_dialog.png"/>
+          </fig></stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

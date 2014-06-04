@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
+<topic id="extend-oxygen-with-plugins">
+    <title>Extending <ph keyref="product"/> with
+    Plugins</title>
+    <prolog>
+    <metadata>
+      <keywords><indexterm>Extend Oxygen with Plugins</indexterm></keywords>
+    </metadata>
+  </prolog>
+    <body>
+        <p>This chapter explains how to write and install a plugin for <ph
+        keyref="product"/>. It treats only the
+      standalone version, as the Eclipse plugin version can be extended with other plugins following
+      the rules of the Eclipse platform.</p>
+    </body>
+</topic>

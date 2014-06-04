@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/topic.dtd">
+<topic id="revert-changes">
+  <title>Revert Your Changes</title>
+  <prolog>
+    <metadata>
+      <keywords><indexterm>Synchronize with the SVN Repository<indexterm>resolve conflicts<indexterm>revert
+              changes</indexterm></indexterm></indexterm></keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <p>If you want to undo all changes you made in a file since the last update you need to select
+      the file, right click to pop up the contextual menu and then select
+        <uicontrol>Revert</uicontrol>. A dialog will pop up showing you the files that you have
+      changed and can be reverted. Select those you want to revert and click the
+        <uicontrol>OK</uicontrol> button. Revert will only undo your local changes. It does not undo
+      any changes which have already been committed. If you choose to revert the file to the
+      pristine copy which resides in the administration folders then the eventual conflict is solved
+      by losing your outgoing modifications. If you try to revert a resource not under version
+      control, the resource will be deleted from the file system.</p>
+    <p>If you want some of your outgoing changes to be overridden you must first open the file in
+        <xref href="diff-view.dita"><uicontrol>Compare</uicontrol> view</xref> and choose the
+      sections to be replaced with ones from the repository file. This can be achieved either by
+      editing directly the file or by using the action <uicontrol>Copy change from right to
+        left</uicontrol> from the <xref href="diff-toolbar.dita"><uicontrol>Compare</uicontrol> view
+        toolbar</xref>. After editing the conflicting file you have to run the action
+        <uicontrol>Mark as merged</uicontrol> before committing it.</p>
+    <p>If you want to drop all local changes and in the same time bring all incoming changes into
+      your working copy resource you can use the <uicontrol>Override and update</uicontrol> action
+      which discards the changes in the local file and updates it from the repository. A dialog will
+      show you the files that will be affected.</p>
+    <fig>
+      <title>Override and update dialog</title>
+      <image href="../img/sa_svn_override_update_dialog.png"/>
+    </fig>
+    <p>In the first table in the dialog you will be able to see the resources that will be
+      overridden. You can also select or deselect them as you wish. In the second table you will
+      find the list of resources that will be updated. Only resources that have an incoming status
+      are updated.</p>
+  </body>
+</topic>
