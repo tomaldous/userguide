@@ -32,27 +32,23 @@
         </dlentry>
         <dlentry product="author developer editor authorEclipse developerEclipse editorEclipse">
           <dt><uicontrol>Completion proposal background</uicontrol></dt>
-          <dd>Allows you to set the background color of the <xref
-              keyref="glossentry_content-completion-assistant"><term>Content Completion
-                Assistant</term></xref>.</dd>
+          <dd>Allows you to set the background color of the <term>Content Completion
+              Assistant</term>.</dd>
         </dlentry>
         <dlentry product="author developer editor authorEclipse developerEclipse editorEclipse">
           <dt><uicontrol>Completion proposal foreground</uicontrol></dt>
-          <dd>Allows you to set the color of the text in the <xref
-              keyref="glossentry_content-completion-assistant"><term>Content Completion
-                Assistant</term></xref>.</dd>
+          <dd>Allows you to set the color of the text in the <term>Content Completion
+              Assistant</term>.</dd>
         </dlentry>
         <dlentry product="author developer editor authorEclipse developerEclipse editorEclipse">
           <dt><uicontrol>Documentation window background</uicontrol></dt>
           <dd>Allows you to set the background color of the documentation of elements suggested by
-            the <xref keyref="glossentry_content-completion-assistant"><term>Content Completion
-                Assistant</term></xref>.</dd>
+            the <term>Content Completion Assistant</term>.</dd>
         </dlentry>
         <dlentry product="author developer editor authorEclipse developerEclipse editorEclipse">
           <dt><uicontrol>Documentation window foreground</uicontrol></dt>
           <dd>Allows you to set the color of the text for the documentation of elements suggested by
-            the <xref keyref="glossentry_content-completion-assistant"><term>Content Completion
-                Assistant</term></xref>.</dd>
+            the <term>Content Completion Assistant</term>.</dd>
         </dlentry>
         <dlentry product="author developer editor">
           <dt><uicontrol>Find highlight color</uicontrol></dt>
@@ -176,9 +172,8 @@
         </dlentry>
         <dlentry product="author developer editor authorEclipse developerEclipse editorEclipse">
           <dt><uicontrol>Display quick-assist and quick-fix side hints</uicontrol></dt>
-          <dd>Displays the <xref keyref="glossentry_quick-assist"><term>Quick Assist</term></xref>
-            icon (<image href="../img/QuickAssist16.png"/>) and <xref keyref="glossentry_quick-fix"
-                ><term>Quick Fix</term></xref> icon (<image href="../img/AutomaticErrorQF.gif"
+          <dd>Displays the <term>Quick Assist</term> icon (<image href="../img/QuickAssist16.png"/>)
+            and <term>Quick Fix</term> icon (<image href="../img/AutomaticErrorQF.gif"
               id="image_w2j_s2y_xn" product="authorEclipse developerEclipse editorEclipse"/><image
               href="../img/QuickFix16.png" id="image_zts_v2y_xn" product="author developer editor"
             />) in the line number stripe on the left side of the editor.</dd>
@@ -206,10 +201,9 @@
         </dlentry>
         <dlentry product="authorEclipse developerEclipse editorEclipse">
           <dt><uicontrol>Minimum fold range</uicontrol></dt>
-          <dd>You can specify the minimum number of lines in a block for which the <xref
-              keyref="glossentry_foldable-elements"><term>folding</term></xref> support becomes
-            active. If you modify this value, the change takes effect next time you open the
-            editor.</dd>
+          <dd>You can specify the minimum number of lines in a block for which the
+              <term>folding</term> support becomes active. If you modify this value, the change
+            takes effect next time you open the editor.</dd>
         </dlentry>
         <dlentry
           conkeyref="reusables-configuring-oxygen/enable-mouse-wheel-zoom"
