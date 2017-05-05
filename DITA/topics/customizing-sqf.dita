@@ -15,12 +15,12 @@
     </metadata>
   </prolog>
     <body>
-    <p>You can define and customize Schematron <xref keyref="glossentry_quick-fix"><term>Quick
-          Fixes</term></xref> directly in the current Schematron file or in a separate Schematron
-      file. The Schematron <term>Quick Fixes</term> are an extension of the Schematron language and
-      they allow you to define fixes for Schematron error messages. You can refer the <term>Quick
-        Fixes</term> from the <codeph>assert</codeph> or <codeph>report</codeph> elements in the
-      values of the <codeph>sqf:fix</codeph> attributes.</p>
+    <p>GEORGE You can define and customize Schematron <xref keyref="glossentry_quick-fix"
+          ><term>Quick Fixes</term></xref> directly in the current Schematron file or in a separate
+      Schematron file. The Schematron <term>Quick Fixes</term> are an extension of the Schematron
+      language and they allow you to define fixes for Schematron error messages. You can refer the
+        <term>Quick Fixes</term> from the <codeph>assert</codeph> or <codeph>report</codeph>
+      elements in the values of the <codeph>sqf:fix</codeph> attributes.</p>
       <section id="defining_a_schematron_quick_fix">
       <title>Defining a Schematron Quick Fix</title>
       <p>The basics of a Schematron <term>Quick Fix</term> is defined by an ID, name, description,
